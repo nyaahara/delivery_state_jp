@@ -1,5 +1,7 @@
 require "delivery_state_jp/version"
 
 module DeliveryStateJp
-  # Your code goes here...
+  def self.mee
+    'maa'
+  end
 end
