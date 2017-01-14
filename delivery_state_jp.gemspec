@@ -14,9 +14,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/nyaahara/delivery_state_jp'
   spec.license       = 'MIT'
 
-  spec.files = Dir['lib/**/*', 'LICENSE.txt', 'Rakefile', 'README.md']
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
   spec.add_dependency 'nokogiri', '~> 1.6'
