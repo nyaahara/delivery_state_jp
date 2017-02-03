@@ -9,7 +9,7 @@ module DeliveryStateJp
     end
 
     def self.xpath(index)
-      "/html/body/center[3]/table[3]/tr[#{index + 1}]/td[2]/text()"
+      "/html/body/center[3]/table[3]/tr[#{index}]/td[2]/text()"
     end
 
     def self.charset
