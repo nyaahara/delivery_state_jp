@@ -11,6 +11,11 @@ module DeliveryStateJp
       statuses.last
     end
 
+    def self.tracking_error_message(args)
+      doc = Nokogiri::HTML.parse(response_body(args), nil, charset)
+      error_messages.map { |error_message| (doc.search "[text() *= '#{error_message}']").last }.compact.map(&:text).map(&:strip).join('、')
+    end
+
     def self.response_body(args)
       number = args.fetch(:number)
       uri = URI.parse(action_url)
@@ -36,6 +41,10 @@ module DeliveryStateJp
     end
 
     def self.xpath(_index)
+      fail NotImplementedError
+    end
+
+    def self.error_messages
       fail NotImplementedError
     end
   end

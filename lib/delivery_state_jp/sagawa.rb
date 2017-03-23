@@ -15,5 +15,9 @@ module DeliveryStateJp
     def self.charset
       'shift-jis'
     end
+
+    def self.error_messages
+      %w(恐れ入りますが、お問い合せ送り状NOをお確かめください。)
+    end
   end
 end

@@ -14,5 +14,9 @@ module DeliveryStateJp
     def self.charset
       'utf-8'
     end
+
+    def self.error_messages
+      %w(お問い合わせ番号の入力桁数に誤りがあります。 お問い合わせ番号が見つかりません。)
+    end
   end
 end

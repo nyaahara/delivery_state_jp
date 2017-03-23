@@ -15,5 +15,9 @@ module DeliveryStateJp
     def self.charset
       'shift-jis'
     end
+
+    def self.error_messages
+      %w(入力されたお問合せ番号が見当りません お問合せ番号:桁数が不足しています お問合せ番号:数字のみを入力してください お問合せ番号:桁数がオーバーしています)
+    end
   end
 end

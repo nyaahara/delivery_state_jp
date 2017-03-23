@@ -15,5 +15,9 @@ module DeliveryStateJp
     def self.charset
       'shift-jis'
     end
+
+    def self.error_messages
+      %w(伝票番号誤り)
+    end
   end
 end
