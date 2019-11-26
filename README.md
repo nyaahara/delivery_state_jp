@@ -42,3 +42,10 @@ irb(main):007:0> DeliveryStateJp::Seino.delivery_state(number: 'xxxx-xxxx-xxxx-x
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+
+## For gem uploading for developers.
+
+```angular2
+gem build delivery_state_jp.gemspec
+gem push delivery_state_jp-1.0.9.gem
+```
