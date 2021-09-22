@@ -1,5 +1,14 @@
 module DeliveryStateJp
   class Yamato < DeliveryStateJp::Base
+    def self.delivery_state(args)
+      content = response_body(args).force_encoding("UTF-8")
+      if m = content.match(/１件目.+\n.+.+\n.+\n.+swd.write.+>(?<state>.+)\<br\>\<\/font\>\<\/td\>/)
+        m[:state]
+      else
+        '不明'
+      end
+    end
+
     def self.action_url
       'http://toi.kuronekoyamato.co.jp/cgi-bin/tneko'
     end
