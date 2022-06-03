@@ -1,7 +1,7 @@
 module DeliveryStateJp
   class Seino < DeliveryStateJp::Base
     def self.action_url
-      'http://track.seino.co.jp/cgi-bin/gnpquery.pgm'
+      'https://track.seino.co.jp/cgi-bin/gnpquery.pgm'
     end
 
     def self.post_params(number)
