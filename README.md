@@ -47,5 +47,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ```angular2
 gem build delivery_state_jp.gemspec
-gem push delivery_state_jp-1.0.20.gem
-```
+gem push delivery_state_jp-1.0.22.gem
+``~~~~`
