@@ -10,7 +10,7 @@ module DeliveryStateJp
     end
 
     def self.action_url
-      'http://toi.kuronekoyamato.co.jp/cgi-bin/tneko'
+      'https://toi.kuronekoyamato.co.jp/cgi-bin/tneko'
     end
 
     def self.post_params(number)
